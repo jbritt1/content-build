@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 
-const { mapKeys, camelCase } = require('lodash');
 const {
   getDrupalValue,
   isPublished,
@@ -9,6 +8,7 @@ const {
   utcToEpochTime,
   getImageCrop,
 } = require('./helpers');
+const { mapKeys, camelCase } = require('lodash');
 
 const getSocialMediaObject = ({ uri, title }) =>
   uri

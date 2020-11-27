@@ -29,11 +29,9 @@ function replaceWithDrupalLinks(data, files) {
       }
 
       if (newValue !== current[key]) {
-        /* eslint-disable prefer-object-spread */
         current = Object.assign({}, current, {
           [key]: newValue,
         });
-        /* eslint-enable prefer-object-spread */
       }
     });
   }
@@ -72,12 +70,12 @@ function createHeaderFooterData(buildOptions) {
 
     // eslint-disable-next-line no-param-reassign
     files['generated/headerFooter.json'] = {
-      contents: Buffer.from(serialized),
+      contents: new Buffer(serialized),
     };
 
     // eslint-disable-next-line no-param-reassign
     files['generated/drupalHeaderFooter.json'] = {
-      contents: Buffer.from(drupalMenuSerialized),
+      contents: new Buffer(drupalMenuSerialized),
     };
 
     done();

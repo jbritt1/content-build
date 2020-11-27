@@ -48,7 +48,7 @@ async function downloadFromLiveBucket(files, buildOptions) {
 
   files[fileManifestPath] = {
     path: fileManifestPath,
-    contents: Buffer.from(JSON.stringify(fileManifest)),
+    contents: new Buffer(JSON.stringify(fileManifest)),
   };
 
   const entryNames = Object.keys(fileManifest);

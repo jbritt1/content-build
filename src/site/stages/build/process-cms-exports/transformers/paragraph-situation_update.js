@@ -1,5 +1,5 @@
-const moment = require('moment-timezone');
 const { getDrupalValue } = require('./helpers');
+const moment = require('moment-timezone');
 
 const transform = entity => {
   const {

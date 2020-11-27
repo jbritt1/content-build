@@ -107,7 +107,9 @@ function downloadDrupalAssets(options) {
       log(`Downloaded ${downloadResults.downloadCount} asset(s) from Drupal`);
       if (downloadResults.errorCount) {
         log(
-          `${downloadResults.errorCount} error(s) downloading assets from Drupal`,
+          `${
+            downloadResults.errorCount
+          } error(s) downloading assets from Drupal`,
         );
       }
     }

@@ -1,6 +1,3 @@
-const { mapKeys, camelCase } = require('lodash');
-const assert = require('assert');
-const moment = require('moment');
 const {
   getDrupalValue,
   utcToEpochTime,
@@ -10,6 +7,9 @@ const {
   isPublished,
   getImageCrop,
 } = require('./helpers');
+const { mapKeys, camelCase } = require('lodash');
+const assert = require('assert');
+const moment = require('moment');
 
 function toUtc(timeString, withExplicitUtc = true) {
   const time = moment.utc(timeString);

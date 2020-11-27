@@ -38,7 +38,9 @@ const checkCollections = () => (files, metalsmith, done) => {
           !VALID_COLLECTIONS.includes(file.collection)
         ) {
           accum.push(
-            `Error: Your { collection: "${file.collection}" }, does not exist in the collection: ${key}`,
+            `Error: Your { collection: "${
+              file.collection
+            }" }, does not exist in the collection: ${key}`,
           );
         }
       }
@@ -46,7 +48,9 @@ const checkCollections = () => (files, metalsmith, done) => {
       // Checks if a page children is valid. A child collection is always going to be a string
       if (file.children && !VALID_COLLECTIONS.includes(file.children)) {
         accum.push(
-          `Error: Your { children: "${file.children}" }, does not exist in the collection: ${key}`,
+          `Error: Your { children: "${
+            file.children
+          }" }, does not exist in the collection: ${key}`,
         );
       }
 
